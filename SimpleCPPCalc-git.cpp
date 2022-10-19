@@ -13,12 +13,15 @@ int main()
     string pin;
     string pin2;
     string complete;
+    string error;
     // introduction + operation selection
     opselect = "Hello there! Please select the operation you wish to perform.\n available operations are as follows:\n addition (a), subtraction (s), multiplication (m), and division (d).\n Please select an operation by typing the corresponding letter and hitting the Enter key.";
     // first number to go in for operation (pin stands for "please insert number")
     pin = "Alright, now please insert a number.\n";
     // second number to go in for operation
     pin2 = "Fantastic! Now, please do insert a second number.\n";
+    // error message
+    error = "Sorry, that isn't an available operation at this moment. \n Please restart and try again.";
     // completion, each having a prefix to determine which operation they go with
     string acomplete = "Wonderful, thank you. The sum of your two numbers is \n";
     string scomplete = "Wonderful, thank you. The difference of your two numbers is \n";
@@ -31,7 +34,7 @@ int main()
     switch (operation) {
         // error message if proper operation is not selected
     default:
-        cout << "Sorry, that isn't an available operation at this moment. \n Please restart and try again.";
+        cout << error;
         break;
         // actual operations, 'a' being addition, 's' being subtraction, 'm' being multiplication, and 'd' being division.
     case 'a':
