@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int sum, difference, product;
-    float num1, num2, dividend;
+    double num1, num2, dividend;
     char operation;
     string opselect;
     string pin;
@@ -31,29 +31,25 @@ int main()
     cout << pin2;
     cin >> num2;
 
-    if (operation == 'a') {
-        sum = num1 + num2;
+    switch(operation) {
+        case 'a' :
+                sum = num1 + num2;
 
         cout << acomplete << sum;
-}
-
-    if (operation == 's') {
-        difference = num1 - num2;
+        case 's' : 
+                difference = num1 - num2;
 
         cout << scomplete << difference;
-    }
-
-    if (operation == 'm') {
-        product = num1 * num2;
+        case 'm' :
+                product = num1 * num2;
 
         cout << mcomplete << product;
-    }
-
-    if (operation == 'd') {
-        dividend = num1 / num2;
+        case 'd' :
+                dividend = num1 / num2;
 
         cout << dcomplete << dividend;
-    }
 
+    }
+    
     return 0;
 }
